@@ -1,0 +1,35 @@
+{
+  "name": "angular4-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "serve": "http-server . -p 5556",
+    "build": "npm run clean && tsc",
+    "build_prod": "npm run build && browserify -s main dist/main.js > dist/bundle.js",
+    "minify": "uglifyjs dist/bundle.js --screw-ie8 --compress --mangle --output dist/bundle.min.js"
+  },
+  "author": "Ilya Korobitsyn <mail@korobochka.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/core-js": "^0.9.41",
+    "browserify": "^14.3.0",
+    "http-server": "^0.9.0",
+    "typescript": "^2.3.0",
+    "uglifyjs": "^2.4.10"
+  },
+  "dependencies": {
+    "@angular/common": "^4.1.0",
+    "@angular/compiler": "^4.1.0",
+    "@angular/core": "^4.1.0",
+    "@angular/forms": "^4.1.0",
+    "@angular/platform-browser": "^4.1.0",
+    "@angular/platform-browser-dynamic": "^4.1.0",
+    "@angular/router": "^4.1.0",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.3.0",
+    "zone.js": "^0.8.9"
+  }
+}

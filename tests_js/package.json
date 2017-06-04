@@ -1,0 +1,10 @@
+{
+  "name": "protractor-talk",
+  "version": "1.0.0",
+  "description": "Example for the Heisenbug talk",
+  "author": "Ilya Korobitsyn <mail@korobochka.org>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "protractor": "^5.1.1"
+  }
+}

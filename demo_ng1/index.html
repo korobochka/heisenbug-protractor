@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html ng-app="names">
+<head>
+  <script src="./angular.min.js"></script>
+  <script src="./names.js"></script>
+  <link href="./bootstrap.css" rel="stylesheet">
+  <title>Nicknames NG1</title>
+</head>
+<body class="ng-cloak">
+  <div ng-controller="NameCtrl" class="container">
+    <div>
+      <h2>Nicknames NG1</h2>
+      <br />
+      <br />
+      <form class="form-inline">
+        <input ng-model="nick" type="text" class="input-large"/>
+        <input ng-model="age" type="text" class="input-small"/>
+        <button ng-click="doAdd()" class="btn input-submit">Submit</button>
+      </form>
+      <h3>{{loading}}</h3>
+    </div>
+    <h4>Results</h4>
+    <table class="table">
+      <thead><tr>
+        <th>Time</th>
+        <th>Nick</th>
+        <th>Age</th>
+        <th>Result</th>
+      </tr></thead>
+      <tr ng-repeat="result in results">
+        <td>
+          {{result.timestamp | date:'mediumTime'}}
+        </td>
+        <td>{{result.nick}}</td>
+        <td>{{result.age}}</td>
+        <td>{{result.result}}</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
